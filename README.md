@@ -6,4 +6,4 @@
 
 ## How to run the application
 
-**Just open the html in a browser and watch the specrunner accomplish the tests**
+**Just open the html in a browser and watch the specrunner accomplishing the tests**
