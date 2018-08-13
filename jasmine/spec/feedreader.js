@@ -65,7 +65,7 @@ $(function() {
     */
 
    it('menu hidden by default', function () {
-     expect(document.querySelector('body.menu-hidden')).not.toBe(null);
+     expect(document.querySelector('body')).hasClass('menu-hidden')).toBe(true);
    });
 
    /* TODO: Write a test that ensures the menu changes
@@ -76,7 +76,7 @@ $(function() {
 
    it('menu changes visibility when clicked', function () {
      document.querySelector('i.icon-list').click();
-     expect(document.querySelector('body.menu-hidden')).toBe(null);
+     expect(document.querySelector('body')).hasClass('menu-hidden')).toBe(false);
    });
 
  });
@@ -98,12 +98,7 @@ $(function() {
     */
 
     it('at least a single .entry element after loadFeed', function (done) {
-      let entries = document.querySelectorAll('.entry');
-      let atLeastOneEntry = true;
-      if (entries.length === 0) {
-        atLeastOneEntry = false;
-      }
-      expect(atLeastOneEntry).toBe(true);
+        expect($('.feed .entry').length).toBeGreaterThan(0);
       done();
     });
 
@@ -116,9 +111,9 @@ $(function() {
     let oldFeed;
     beforeEach(function(done) {
       loadFeed(0, function() {
-       // store old feed
+       // storing old feed
        oldFeed = $('.feed').html();
-       // fetch newer feed
+       // fetching newer feed
        loadFeed(1, done);
      });
    });
