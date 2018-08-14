@@ -77,6 +77,9 @@ $(function() {
    it('menu changes visibility when clicked', function () {
      document.querySelector('i.icon-list').click();
      expect($('body').hasClass('menu-hidden')).toBe(false);
+
+     document.querySelector('i.icon-list').click();
+     expect($("body").hasClass('menu-hidden')).toBe(true);
    });
 
  });
