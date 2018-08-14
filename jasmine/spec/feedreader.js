@@ -65,7 +65,7 @@ $(function() {
     */
 
    it('menu hidden by default', function () {
-     expect(document.querySelector('body')).hasClass('menu-hidden')).toBe(true);
+     expect($('body').hasClass('menu-hidden')).toBe(true);
    });
 
    /* TODO: Write a test that ensures the menu changes
@@ -76,7 +76,7 @@ $(function() {
 
    it('menu changes visibility when clicked', function () {
      document.querySelector('i.icon-list').click();
-     expect(document.querySelector('body')).hasClass('menu-hidden')).toBe(false);
+     expect($('body').hasClass('menu-hidden')).toBe(false);
    });
 
  });
